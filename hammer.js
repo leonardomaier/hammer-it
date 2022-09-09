@@ -5,7 +5,13 @@ const BASE_URL = 'http://localhost:3000'
 
 const delay = async (ms) => await new Promise(resolve => setTimeout(resolve, ms));
 
-for (let i = 0; i < 10; i++) {
+const getRandomInt = (min, max) => {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+for (let i = 0; i < 1000; i++) {
 
   const payload = {
     name: faker.name.fullName(),
@@ -25,5 +31,7 @@ for (let i = 0; i < 10; i++) {
     console.log(`Request #${i} done with status 200\n\n`)
   }
 
-  await delay(3000)
+  await delay(
+    getRandomInt(1500, 3500)
+  )
 }
