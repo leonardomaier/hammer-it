@@ -1,18 +1,20 @@
 {
   "name": "hammer-it",
   "version": "1.0.0",
-  "type": "module",
   "description": "",
   "main": "hammer.js",
   "scripts": {
+    "start": "tsc && node dist/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@faker-js/faker": "^7.5.0"
+    "@faker-js/faker": "^7.5.0",
+    "@types/node": "^18.7.16",
+    "typescript": "^4.8.3"
   },
   "dependencies": {
-    "node-fetch": "^3.2.10"
+    "cross-fetch": "^3.1.5"
   }
 }
